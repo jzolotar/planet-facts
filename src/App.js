@@ -1,7 +1,13 @@
-import './App.css';
+import { Routes } from 'react-router-dom';
+import Provider from './components/Provider/Provider';
+import Wrapper from './components/Wrapper/Wrapper';
 
 function App() {
-  return <div className='App'></div>;
+  return (
+    <Provider>
+      <Wrapper></Wrapper>
+    </Provider>
+  );
 }
 
 export default App;
