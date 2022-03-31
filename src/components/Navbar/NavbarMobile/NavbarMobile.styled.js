@@ -12,7 +12,5 @@ export const StyledNavbarMobile = styled.header`
       font-size: 1.45rem;
       text-transform: uppercase;
     }
-    button {
-    }
   }
 `;

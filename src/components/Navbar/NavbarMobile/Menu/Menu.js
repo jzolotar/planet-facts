@@ -1,15 +1,16 @@
 import { StyledMenu, PlanetIcon } from './Menu.styled';
+import { NavLink } from 'react-router-dom';
 
 import data from '../../../../data.json';
 
-const Menu = () => {
+const Menu = ({ isOpen }) => {
   return (
-    <StyledMenu>
+    <StyledMenu isOpen={isOpen}>
       {data.map((planet, index) => (
-        <li key={index}>
+        <NavLink to='' key={index}>
           <PlanetIcon planetColor={planet.color} />
           <p>{planet.name}</p>
-        </li>
+        </NavLink>
       ))}
     </StyledMenu>
   );

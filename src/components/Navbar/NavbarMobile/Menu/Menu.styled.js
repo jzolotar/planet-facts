@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const PlanetIcon = styled.div`
-  width: 0.95rem;
-  height: 0.95rem;
+  width: 1.1rem;
+  height: 1.1rem;
   background-color: ${(props) => props.planetColor || 'blue'};
   border-radius: 100px;
 `;
@@ -17,8 +17,11 @@ export const StyledMenu = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  transition: 0.5s ease-in-out;
+  transform: ${({ isOpen }) =>
+    isOpen ? 'translateX(0)' : 'translateX(-125%)'};
 
-  li {
+  a {
     width: 100%;
     display: flex;
     align-items: center;
@@ -31,6 +34,7 @@ export const StyledMenu = styled.ul`
       font-size: 1.2rem;
       font-weight: 700;
       letter-spacing: 0.15rem;
+      color: white;
     }
   }
 `;

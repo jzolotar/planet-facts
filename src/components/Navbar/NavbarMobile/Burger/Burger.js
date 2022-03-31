@@ -1,8 +1,8 @@
 import { StyledBurger } from './Burger.styled';
 
-const Burger = () => {
+const Burger = ({ onClickHandler, open }) => {
   return (
-    <StyledBurger>
+    <StyledBurger isOpen={open} onClick={onClickHandler}>
       <div></div>
       <div></div>
       <div></div>
