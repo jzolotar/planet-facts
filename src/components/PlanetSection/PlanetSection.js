@@ -10,7 +10,7 @@ const PlanetSection = () => {
       <Tabs />
       <PlanetImage />
       <TextSection />
-      <NumbersSection />
+      {/* <NumbersSection /> */}
     </StyledPlanetSection>
   );
 };
