@@ -14,3 +14,5 @@ const PlanetSection = () => {
     </StyledPlanetSection>
   );
 };
+
+export default PlanetSection;
