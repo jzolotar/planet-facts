@@ -14,6 +14,9 @@ export const StyledTextSection = styled.article`
     align-items: flex-start;
   }
 
+  @media (min-width: 63.5rem) {
+    align-self: end;
+  }
   h1 {
     font-size: 2.5rem;
     letter-spacing: 0.1rem;

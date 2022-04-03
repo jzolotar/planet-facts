@@ -12,6 +12,7 @@ export const StyledNavbarDesktop = styled.header`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: 0.1px solid ${({ theme }) => theme.colors.grayDark};
   }
   @media (min-width: 62.1rem) {
     flex-direction: row;

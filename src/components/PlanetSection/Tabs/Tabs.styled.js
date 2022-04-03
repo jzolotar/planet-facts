@@ -21,6 +21,15 @@ export const StyledTabs = styled.div`
     align-items: center;
     justify-content: center;
   }
+
+  @media (min-width: 63.5rem) {
+    align-self: stretch;
+    align-self: end;
+    align-self: start;
+    justify-self: start;
+
+    max-width: unset;
+  }
 `;
 
 export const Button = styled.button`
@@ -36,10 +45,12 @@ export const Button = styled.button`
     padding: 1rem;
     text-align: left;
     border: 1px solid ${({ theme }) => theme.colors.grayDark};
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
   }
+
+  /* @media (min-width: 63.5rem) {
+    justify-self: start;
+    max-width: unset;
+  } */
 
   & .active {
   }

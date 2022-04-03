@@ -4,6 +4,13 @@ import logo from '../../../assets/images/planet-earth.svg';
 export const ImgStyled = styled.div`
   padding: 2rem 1.5rem;
   grid-area: img;
+
+  @media (min-width: 63.5rem) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   div {
     margin: 0 auto;
     width: 150px;
@@ -17,6 +24,11 @@ export const ImgStyled = styled.div`
       margin: 2rem auto;
       height: 245px;
       width: 245px;
+    }
+
+    @media (min-width: 63.5rem) {
+      height: 340px;
+      width: 340px;
     }
   }
 `;
