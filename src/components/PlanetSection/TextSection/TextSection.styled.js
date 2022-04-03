@@ -8,8 +8,13 @@ export const StyledTextSection = styled.article`
   align-items: center;
   gap: 0.25rem;
   color: white;
+  grid-area: text-section;
+
+  @media (min-width: 52rem) {
+    align-items: flex-start;
+  }
+
   h1 {
-    text-align: center;
     font-size: 2.5rem;
     letter-spacing: 0.1rem;
     color: ${({ theme }) => theme.colors.white};
@@ -18,6 +23,9 @@ export const StyledTextSection = styled.article`
     text-align: center;
     font-size: 0.9rem;
     color: ${({ theme }) => theme.colors.whiteAlpha50};
+    @media (min-width: 52rem) {
+      text-align: left;
+    }
   }
 
   div {

@@ -1,4 +1,3 @@
-import { NavbarStyled } from './Navbar.styled';
 import NavbarDesktop from './NavbarDesktop/NavbarDesktop';
 import NavbarMobile from './NavbarMobile/NavbarMobile';
 import Media from 'react-media';
@@ -8,7 +7,7 @@ const Navbar = () => {
   return (
     <Media
       queries={{
-        small: '(max-width: 650px)',
+        small: '(max-width: 52rem)',
 
         large: '(min-width: 1200px)',
       }}
