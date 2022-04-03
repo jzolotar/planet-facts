@@ -18,7 +18,7 @@ export const StyledLink = styled.li`
       color: ${({ color }) => color};
     }
 
-    @media (min-width: 52rem) {
+    @media (min-width: 63.5rem) {
       :hover::before,
       .active {
         content: '';
