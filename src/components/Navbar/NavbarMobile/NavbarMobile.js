@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Burger from './Burger/Burger';
 import Menu from './Menu/Menu';
-import { StyledNavbarMobile } from './NavbarMobile.styled';
+import { NavbarMobileOverlay, StyledNavbarMobile } from './NavbarMobile.styled';
 
 const NavbarMobile = () => {
   const [open, setOpen] = useState(false);
@@ -11,9 +11,12 @@ const NavbarMobile = () => {
 
   return (
     <StyledNavbarMobile>
+      {/* {open && <NavbarMobileOverlay />} */}
+      <NavbarMobileOverlay isOpen={open} />
       <nav>
         <h1>The Plantes</h1>
         <Burger onClickHandler={onClickHandler} open={open} />
+
         <Menu isOpen={open} />
       </nav>
     </StyledNavbarMobile>

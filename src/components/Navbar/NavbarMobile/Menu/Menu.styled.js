@@ -5,9 +5,11 @@ export const PlanetIcon = styled.div`
   height: 1.1rem;
   background-color: ${(props) => props.planetColor || 'blue'};
   border-radius: 100px;
+  z-index: 1010;
 `;
 
 export const StyledMenu = styled.ul`
+  z-index: 1010;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -17,9 +19,11 @@ export const StyledMenu = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  transition: 0.5s ease-in-out;
+
+  transition: 0.5s ease-in;
   transform: ${({ isOpen }) =>
     isOpen ? 'translateX(0)' : 'translateX(-125%)'};
+  z-index: 1010;
 
   a {
     width: 100%;

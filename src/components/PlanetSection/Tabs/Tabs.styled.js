@@ -23,10 +23,7 @@ export const StyledTabs = styled.div`
   }
 
   @media (min-width: 63.5rem) {
-    align-self: stretch;
-    align-self: end;
     align-self: start;
-    justify-self: start;
 
     max-width: unset;
   }
@@ -40,17 +37,18 @@ export const Button = styled.button`
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  transition: ease-in-out 0.6s;
+
   @media (min-width: 52rem) {
     width: 100%;
     padding: 1rem;
     text-align: left;
     border: 1px solid ${({ theme }) => theme.colors.grayDark};
-  }
 
-  /* @media (min-width: 63.5rem) {
-    justify-self: start;
-    max-width: unset;
-  } */
+    :hover {
+      background-color: ${({ theme }) => theme.colors.grayDark};
+    }
+  }
 
   & .active {
   }
