@@ -19,8 +19,14 @@ export const StyledTextSection = styled.article`
   }
   h1 {
     font-size: 2.5rem;
-    letter-spacing: 0.1rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
     color: ${({ theme }) => theme.colors.white};
+
+    @media (min-width: 63.5rem) {
+      font-size: 60px;
+      letter-spacing: 0.6rem;
+    }
   }
   p {
     text-align: center;
