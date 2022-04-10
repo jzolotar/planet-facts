@@ -11,6 +11,7 @@ function App() {
       <Wrapper>
         <Navbar />
         <Routes>
+          <Route path='/' element={<Earth />} />
           <Route path='/earth' element={<Earth />} />
         </Routes>
       </Wrapper>

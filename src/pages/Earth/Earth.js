@@ -1,5 +1,8 @@
+import PlanetSection from '../../components/PlanetSection/PlanetSection';
+import { data } from './data';
+
 const Earth = () => {
-  return <h1>Earth</h1>;
+  return <PlanetSection data={data} />;
 };
 
 export default Earth;

@@ -1,24 +1,77 @@
 import { StyledTextSection } from './TextSection.styled';
 
 import { FiExternalLink } from 'react-icons/fi';
+import { Fragment } from 'react';
 
-const TextSection = () => {
-  return (
-    <StyledTextSection>
-      <h1>Planet</h1>
-      <p>
-        Mercury is the smallest planet in the Solar System and the closest to
-        the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest
-        of all the Sun's planets. Mercury is one of four terrestrial planets in
-        the Solar System, and is a rocky body like Earth.
-      </p>
+const TextSection = ({
+  name,
+  overview,
+  structure,
+  geology,
+  currentSection,
+}) => {
+  //overview section
+  const overviewSection = (
+    <Fragment>
+      <p>{overview.content}</p>
       <div>
         <span>Source:</span>
-        <a href='https://en.wikipedia.org/wiki/Mercury_(planet)'>
+        <a href={overview.source}>
           Wikipedia
           <FiExternalLink size={12} />
         </a>
       </div>
+    </Fragment>
+  );
+  //strucute section
+  const structureSection = (
+    <Fragment>
+      <p>{structure.content}</p>
+      <div>
+        <span>Source:</span>
+        <a href={structure.source}>
+          Wikipedia
+          <FiExternalLink size={12} />
+        </a>
+      </div>
+    </Fragment>
+  );
+  //geo section
+  const geologySection = (
+    <Fragment>
+      <p>{geology.content}</p>
+      <div>
+        <span>Source:</span>
+        <a href={geology.source}>
+          Wikipedia
+          <FiExternalLink size={12} />
+        </a>
+      </div>
+    </Fragment>
+  );
+
+  console.log(+currentSection);
+
+  return (
+    <StyledTextSection>
+      <h1>{name}</h1>
+      {/* {(() => {
+        switch (+currentSection) {
+          case 0:
+            console.log('overview');
+            return overviewSection;
+          case 1:
+            return structureSection;
+          case 2:
+            return geologySection;
+
+          default:
+            return overviewSection;
+        }
+      })()} */}
+      {+currentSection === 0 && overviewSection}
+      {+currentSection === 1 && structureSection}
+      {+currentSection === 2 && geologySection}
     </StyledTextSection>
   );
 };

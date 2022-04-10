@@ -1,23 +1,23 @@
 import { StyledNumberSection } from './NumbersSection.styled';
 
-const NumbersSection = () => {
+const NumbersSection = ({ rotation, revolution, radius, temperature }) => {
   return (
     <StyledNumberSection>
       <li>
         <p>Rotation time</p>
-        <h1>58.6 DAYS</h1>
+        <h1>{rotation}</h1>
       </li>
       <li>
-        <p>Rotation time</p>
-        <h1>58.6 DAYS</h1>
+        <p>Revolution time</p>
+        <h1>{revolution}</h1>
       </li>
       <li>
-        <p>Rotation time</p>
-        <h1>58.6 DAYS</h1>
+        <p>Radius</p>
+        <h1>{radius}</h1>
       </li>
       <li>
-        <p>Rotation time</p>
-        <h1>58.6 DAYS</h1>
+        <p>Average temp.</p>
+        <h1>{temperature}</h1>
       </li>
     </StyledNumberSection>
   );

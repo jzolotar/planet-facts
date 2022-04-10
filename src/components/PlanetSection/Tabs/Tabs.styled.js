@@ -24,16 +24,17 @@ export const StyledTabs = styled.div`
 
   @media (min-width: 63.5rem) {
     align-self: start;
-
     max-width: unset;
   }
 `;
 
 export const Button = styled.button`
   cursor: pointer;
+  position: relative;
   border: transparent;
   background-color: transparent;
-  color: ${({ theme }) => theme.colors.white};
+
+  color: white;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -45,11 +46,12 @@ export const Button = styled.button`
     text-align: left;
     border: 1px solid ${({ theme }) => theme.colors.grayDark};
 
+    &.active {
+      background-color: ${({ color }) => color};
+    }
+
     :hover {
       background-color: ${({ theme }) => theme.colors.grayDark};
     }
-  }
-
-  & .active {
   }
 `;
