@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import logo from '../../../assets/images/planet-earth.svg';
 import { ImgStyled } from './PlanetImage.styled';
 const PlanetImage = ({
   overviewImg,

@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-import logo from '../../../assets/images/planet-earth.svg';
-
-const logoImg = (overviewImg) => overviewImg;
 
 export const ImgStyled = styled.div`
   padding: 2rem 1.5rem;
