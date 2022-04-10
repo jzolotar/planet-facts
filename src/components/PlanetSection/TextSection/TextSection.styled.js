@@ -34,6 +34,7 @@ export const StyledTextSection = styled.article`
     color: ${({ theme }) => theme.colors.whiteAlpha50};
     @media (min-width: 52rem) {
       text-align: left;
+      padding-right: 2rem;
     }
   }
 

@@ -38,8 +38,9 @@ export const Button = styled.button`
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: ease-in-out 0.6s;
+  transition: ease-in 0.3s;
   &.active {
+    transition: unset;
     color: ${({ color }) => color};
   }
 
@@ -49,13 +50,14 @@ export const Button = styled.button`
     text-align: left;
     border: 1px solid ${({ theme }) => theme.colors.grayDark};
 
-    &.active {
-      background-color: ${({ color }) => color};
-      color: unset;
-    }
-
     :hover {
       background-color: ${({ theme }) => theme.colors.grayDark};
+    }
+
+    &.active {
+      transition: unset;
+      background-color: ${({ color }) => color};
+      color: unset;
     }
   }
 `;
