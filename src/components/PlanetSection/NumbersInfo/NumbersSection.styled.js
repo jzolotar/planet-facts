@@ -32,6 +32,9 @@ export const StyledNumberSection = styled.ul`
     }
     h1 {
       font-size: 1.1rem;
+      @media (min-width: 63.5rem) {
+        font-size: 2rem;
+      }
     }
   }
 `;

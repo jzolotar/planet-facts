@@ -39,6 +39,9 @@ export const Button = styled.button`
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: ease-in-out 0.6s;
+  &.active {
+    color: ${({ color }) => color};
+  }
 
   @media (min-width: 52rem) {
     width: 100%;
@@ -48,6 +51,7 @@ export const Button = styled.button`
 
     &.active {
       background-color: ${({ color }) => color};
+      color: unset;
     }
 
     :hover {

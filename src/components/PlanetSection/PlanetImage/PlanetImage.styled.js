@@ -24,6 +24,16 @@ export const ImgStyled = styled.div`
     height: 120px;
     margin: 0;
     padding: 0;
+
+    @media (min-width: 52rem) {
+      width: 150px;
+      height: 250px;
+    }
+
+    @media (min-width: 63.5rem) {
+      width: 180px;
+      height: 420px;
+    }
   }
 
   @media (min-width: 63.5rem) {
@@ -50,8 +60,8 @@ export const ImgStyled = styled.div`
     }
 
     @media (min-width: 63.5rem) {
-      height: 340px;
-      width: 340px;
+      height: 420px;
+      width: 420px;
     }
   }
 `;
