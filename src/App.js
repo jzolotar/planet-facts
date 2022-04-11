@@ -4,6 +4,13 @@ import Wrapper from './components/Wrapper/Wrapper';
 import Navbar from './components/Navbar/Navbar';
 import PlanetSection from './components/PlanetSection/PlanetSection';
 import Earth from './pages/Earth/Earth';
+import Jupiter from './pages/Jupiter/Jupiter';
+import Mars from './pages/Mars/Mars';
+import Mercury from './pages/Mercury/Mercury';
+import Neptune from './pages/Neptune/Neptune';
+import Saturn from './pages/Saturn/Saturn';
+import Uranus from './pages/Uranus/Uranus';
+import Venus from './pages/Venus/Venus';
 
 function App() {
   return (
@@ -13,13 +20,13 @@ function App() {
         <Routes>
           <Route path='/' element={<Earth />} />
           <Route path='/earth' element={<Earth />} />
-          <Route path='/jupiter' element={<Earth />} />
-          <Route path='/mars' element={<Earth />} />
-          <Route path='/mercury' element={<Earth />} />
-          <Route path='/neptune' element={<Earth />} />
-          <Route path='/saturn' element={<Earth />} />
-          <Route path='/uranus' element={<Earth />} />
-          <Route path='/venus' element={<Earth />} />
+          <Route path='/jupiter' element={<Jupiter />} />
+          <Route path='/mars' element={<Mars />} />
+          <Route path='/mercury' element={<Mercury />} />
+          <Route path='/neptune' element={<Neptune />} />
+          <Route path='/saturn' element={<Saturn />} />
+          <Route path='/uranus' element={<Uranus />} />
+          <Route path='/venus' element={<Venus />} />
         </Routes>
       </Wrapper>
     </Provider>
