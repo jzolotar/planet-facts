@@ -1,6 +1,6 @@
 {
   "homepage": "https://jzolotar.github.io/planet-facts",
-  "name": "planet-facts-site",
+  "name": "planet-facts",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

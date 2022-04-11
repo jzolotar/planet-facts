@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 const PageNotFound = () => {
   const pathsArr = [
-    '/planet-facts/mercury',
-    '/planet-facts/venus',
-    '/planet-facts/earth',
-    '/planet-facts/mars',
-    '/planet-facts/jupiter',
-    '/planet-facts/saturn',
-    '/planet-facts/uranus',
-    '/planet-facts/neptune',
+    '/mercury',
+    '/venus',
+    '/earth',
+    '/mars',
+    '/jupiter',
+    '/saturn',
+    '/uranus',
+    '/neptune',
   ];
 
   const randomPath = pathsArr[Math.floor(Math.random() * pathsArr.length)];
