@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/planet-facts/static/js/main.b93d47b5.js",
+    "main.js": "/planet-facts/static/js/main.fe174662.js",
     "static/media/planet-mercury-geology.png": "/planet-facts/static/media/planet-mercury-geology.aa6732c318454e3fc480.png",
     "static/media/planet-venus-geology.png": "/planet-facts/static/media/planet-venus-geology.484f9dacbeb3b555ffba.png",
     "static/media/planet-mars-geology.png": "/planet-facts/static/media/planet-mars-geology.d3ffce8e1e9b9bc5df60.png",
@@ -26,9 +26,9 @@
     "static/media/planet-mercury-internal.svg": "/planet-facts/static/media/planet-mercury-internal.d1be143201898fac437968baae616e6b.svg",
     "static/media/planet-mercury.svg": "/planet-facts/static/media/planet-mercury.1fce205c50f4657418d4562ca24b008a.svg",
     "index.html": "/planet-facts/index.html",
-    "main.b93d47b5.js.map": "/planet-facts/static/js/main.b93d47b5.js.map"
+    "main.fe174662.js.map": "/planet-facts/static/js/main.fe174662.js.map"
   },
   "entrypoints": [
-    "static/js/main.b93d47b5.js"
+    "static/js/main.fe174662.js"
   ]
 }
