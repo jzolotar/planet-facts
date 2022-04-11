@@ -13,6 +13,13 @@ function App() {
         <Routes>
           <Route path='/' element={<Earth />} />
           <Route path='/earth' element={<Earth />} />
+          <Route path='/jupiter' element={<Earth />} />
+          <Route path='/mars' element={<Earth />} />
+          <Route path='/mercury' element={<Earth />} />
+          <Route path='/neptune' element={<Earth />} />
+          <Route path='/saturn' element={<Earth />} />
+          <Route path='/uranus' element={<Earth />} />
+          <Route path='/venus' element={<Earth />} />
         </Routes>
       </Wrapper>
     </Provider>
