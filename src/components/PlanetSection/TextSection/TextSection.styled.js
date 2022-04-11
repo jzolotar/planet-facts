@@ -22,8 +22,10 @@ export const StyledTextSection = styled.article`
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     color: ${({ theme }) => theme.colors.white};
+    margin-top: 1rem;
 
     @media (min-width: 63.5rem) {
+      margin-top: unset;
       font-size: 60px;
       letter-spacing: 0.6rem;
     }

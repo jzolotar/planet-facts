@@ -50,8 +50,6 @@ const TextSection = ({
     </Fragment>
   );
 
-  console.log(+currentSection);
-
   return (
     <StyledTextSection>
       <h1>{name}</h1>

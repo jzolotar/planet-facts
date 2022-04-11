@@ -17,8 +17,6 @@ const PlanetImage = ({
     geo = geologyImg;
   }
 
-  console.log(geo);
-
   return (
     <ImgStyled currentImage={currentImage} geo={geo}>
       <div></div>
