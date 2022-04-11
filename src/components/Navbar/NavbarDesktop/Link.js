@@ -32,10 +32,10 @@ export const StyledLink = styled.li`
   }
 `;
 
-const LinkComp = ({ color, name }) => {
+const LinkComp = ({ path, color, name }) => {
   return (
     <StyledLink color={color}>
-      <NavLink to=''>{name}</NavLink>
+      <NavLink to={path}>{name}</NavLink>
     </StyledLink>
   );
 };

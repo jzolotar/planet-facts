@@ -9,7 +9,7 @@ const Menu = ({ isOpen }) => {
     <Fragment>
       <StyledMenu isOpen={isOpen}>
         {data.map((planet, index) => (
-          <NavLink to='' key={index}>
+          <NavLink to={planet.path} key={index}>
             <PlanetIcon planetColor={planet.color} />
             <p>{planet.name}</p>
           </NavLink>

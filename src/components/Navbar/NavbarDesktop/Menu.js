@@ -6,7 +6,12 @@ const Menu = () => {
   return (
     <StyledMenu>
       {data.map((planet, index) => (
-        <LinkComp key={index} color={planet.color} name={planet.name} />
+        <LinkComp
+          path={planet.path}
+          key={index}
+          color={planet.color}
+          name={planet.name}
+        />
       ))}
     </StyledMenu>
   );
