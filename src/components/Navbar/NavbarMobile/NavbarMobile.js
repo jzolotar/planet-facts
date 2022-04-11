@@ -17,7 +17,7 @@ const NavbarMobile = () => {
         <h1>The Plantes</h1>
         <Burger onClickHandler={onClickHandler} open={open} />
 
-        <Menu isOpen={open} />
+        <Menu onClickHandler={onClickHandler} isOpen={open} />
       </nav>
     </StyledNavbarMobile>
   );

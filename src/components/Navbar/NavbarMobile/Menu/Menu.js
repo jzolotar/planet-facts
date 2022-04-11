@@ -4,12 +4,12 @@ import { NavLink } from 'react-router-dom';
 import data from '../../../../data.json';
 import { Fragment } from 'react';
 
-const Menu = ({ isOpen }) => {
+const Menu = ({ isOpen, onClickHandler }) => {
   return (
     <Fragment>
       <StyledMenu isOpen={isOpen}>
         {data.map((planet, index) => (
-          <NavLink to={planet.path} key={index}>
+          <NavLink onClick={onClickHandler} to={planet.path} key={index}>
             <PlanetIcon planetColor={planet.color} />
             <p>{planet.name}</p>
           </NavLink>
