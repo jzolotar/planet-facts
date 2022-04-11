@@ -21,7 +21,11 @@ function App() {
         <Routes>
           <Route
             path='/'
-            element={<Navigate replace to='planet-facts/earth' />}
+            element={<Navigate replace to='/planet-facts/earth' />}
+          />
+          <Route
+            path='/planet-facts/'
+            element={<Navigate replace to='/planet-facts/earth' />}
           />
           <Route path='planet-facts/earth' element={<Earth />} />
           <Route path='planet-facts/jupiter' element={<Jupiter />} />
@@ -34,7 +38,7 @@ function App() {
           <Route path='planet-facts/404' element={<PageNotFound />} />
           <Route
             path='*'
-            element={<Navigate replace to='planet-facts/404' />}
+            element={<Navigate replace to='/planet-facts/404' />}
           />
         </Routes>
       </Wrapper>

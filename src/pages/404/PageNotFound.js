@@ -14,7 +14,6 @@ const PageNotFound = () => {
   ];
 
   const randomPath = pathsArr[Math.floor(Math.random() * pathsArr.length)];
-  console.log(randomPath);
 
   return (
     <Styled404Page>
