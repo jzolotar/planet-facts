@@ -27,15 +27,15 @@ function App() {
             path='/planet-facts/'
             element={<Navigate replace to='/planet-facts/earth' />}
           />
-          <Route path='planet-facts/earth' element={<Earth />} />
-          <Route path='planet-facts/jupiter' element={<Jupiter />} />
-          <Route path='planet-facts/mars' element={<Mars />} />
-          <Route path='planet-facts/mercury' element={<Mercury />} />
-          <Route path='planet-facts/neptune' element={<Neptune />} />
-          <Route path='planet-facts/saturn' element={<Saturn />} />
-          <Route path='planet-facts/uranus' element={<Uranus />} />
-          <Route path='planet-facts/venus' element={<Venus />} />
-          <Route path='planet-facts/404' element={<PageNotFound />} />
+          <Route path='/planet-facts/earth' element={<Earth />} />
+          <Route path='/planet-facts/jupiter' element={<Jupiter />} />
+          <Route path='/planet-facts/mars' element={<Mars />} />
+          <Route path='/planet-facts/mercury' element={<Mercury />} />
+          <Route path='/planet-facts/neptune' element={<Neptune />} />
+          <Route path='/planet-facts/saturn' element={<Saturn />} />
+          <Route path='/planet-facts/uranus' element={<Uranus />} />
+          <Route path='/planet-facts/venus' element={<Venus />} />
+          <Route path='/planet-facts/404' element={<PageNotFound />} />
           <Route
             path='*'
             element={<Navigate replace to='/planet-facts/404' />}
