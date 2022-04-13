@@ -20,6 +20,38 @@ export const StyledTabs = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    button:nth-child(1)::after {
+      position: absolute;
+      content: '01';
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      letter-spacing: 0.5px;
+      color: ${({ theme }) => theme.colors.grayLight};
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    button:nth-child(2)::after {
+      position: absolute;
+      content: '02';
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      letter-spacing: 0.5px;
+      color: ${({ theme }) => theme.colors.grayLight};
+      font-size: 0.9rem;
+    }
+    button:nth-child(3)::after {
+      position: absolute;
+      content: '03';
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+      letter-spacing: 0.5px;
+      color: ${({ theme }) => theme.colors.grayLight};
+      font-size: 0.9rem;
+    }
   }
 
   @media (min-width: 63.5rem) {
@@ -33,12 +65,12 @@ export const Button = styled.button`
   position: relative;
   border: transparent;
   background-color: transparent;
-
   color: white;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   transition: ease-in 0.3s;
+
   &.active {
     transition: unset;
     color: ${({ color }) => color};
@@ -47,6 +79,7 @@ export const Button = styled.button`
   @media (min-width: 52rem) {
     width: 100%;
     padding: 1rem;
+    padding-left: 2.5rem;
     text-align: left;
     border: 1px solid ${({ theme }) => theme.colors.grayDark};
 
