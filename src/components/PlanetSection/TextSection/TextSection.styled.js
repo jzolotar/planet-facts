@@ -33,6 +33,8 @@ export const StyledTextSection = styled.article`
   p {
     text-align: center;
     font-size: 0.9rem;
+    line-height: 1.3rem;
+    min-height: 7.8rem;
     color: ${({ theme }) => theme.colors.whiteAlpha50};
     @media (min-width: 52rem) {
       text-align: left;
