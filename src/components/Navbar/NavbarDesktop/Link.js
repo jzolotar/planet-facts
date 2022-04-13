@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import data from '../../../data.json';
 
 export const StyledLink = styled.li`
   list-style: none;
@@ -14,13 +13,13 @@ export const StyledLink = styled.li`
     transition: color 0.2s ease-in-out;
 
     :hover,
-    .active {
+    &.active {
       color: ${({ color }) => color};
     }
 
     @media (min-width: 63.5rem) {
       :hover::before,
-      .active {
+      &.active::before {
         content: '';
         position: absolute;
         width: 100%;
@@ -35,7 +34,12 @@ export const StyledLink = styled.li`
 const LinkComp = ({ path, color, name }) => {
   return (
     <StyledLink color={color}>
-      <NavLink to={path}>{name}</NavLink>
+      <NavLink
+        className={({ isActive }) => (isActive ? 'active' : '')}
+        to={path}
+      >
+        {name}
+      </NavLink>
     </StyledLink>
   );
 };
