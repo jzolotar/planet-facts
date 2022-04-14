@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-
-export const StyledTabs = styled.div`
+import { motion } from 'framer-motion';
+export const StyledTabs = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-around;

@@ -3,6 +3,7 @@ import {
   Navigate,
   Route,
   Routes,
+  useLocation,
 } from 'react-router-dom';
 import Provider from './components/Provider/Provider';
 import Wrapper from './components/Wrapper/Wrapper';
@@ -16,14 +17,16 @@ import Saturn from './pages/Saturn/Saturn';
 import Uranus from './pages/Uranus/Uranus';
 import Venus from './pages/Venus/Venus';
 import PageNotFound from './pages/404/PageNotFound';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
+  const location = useLocation();
   return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <Provider>
-        <Wrapper>
-          <Navbar />
-          <Routes>
+    <Provider>
+      <Wrapper>
+        <Navbar />
+        <AnimatePresence exitBeforeEnter={true} initial={false}>
+          <Routes location={location} key={location.pathname}>
             <Route path='/' element={<Navigate replace to='/earth' />} />
             <Route path='/earth' element={<Earth />} />
             <Route path='/jupiter' element={<Jupiter />} />
@@ -36,9 +39,9 @@ function App() {
             <Route path='/404' element={<PageNotFound />} />
             <Route path='*' element={<Navigate replace to='/404' />} />
           </Routes>
-        </Wrapper>
-      </Provider>
-    </Router>
+        </AnimatePresence>
+      </Wrapper>
+    </Provider>
   );
 }
 

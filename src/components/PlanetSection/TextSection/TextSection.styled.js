@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const StyledTextSection = styled.article`
+export const StyledTextSection = styled(motion.article)`
   padding: 0.25rem 1.5rem;
   display: flex;
   flex-direction: column;

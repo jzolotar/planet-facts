@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const ImgStyled = styled.div`
+export const ImgStyled = styled(motion.div)`
   padding: 2rem 1.5rem;
   grid-area: img;
   position: relative;

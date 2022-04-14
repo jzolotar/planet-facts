@@ -4,6 +4,7 @@ import PlanetImage from './PlanetImage/PlanetImage';
 import { StyledPlanetSection } from './PlanetSection.styled';
 import Tabs from './Tabs/Tabs';
 import TextSection from './TextSection/TextSection';
+import { AnimatePresence } from 'framer-motion';
 
 const PlanetSection = ({ data }) => {
   const {

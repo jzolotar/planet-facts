@@ -2,6 +2,31 @@ import { StyledTextSection } from './TextSection.styled';
 
 import { FiExternalLink } from 'react-icons/fi';
 import { Fragment } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
+
+const parVariants = {
+  hidden: { opacity: 0 },
+  visible: { x: 0, opacity: 1, transition: { duration: 1.5 } },
+  exit: { x: -200, opacity: 0, transition: { duration: 1.5 } },
+};
+
+const textSectionVariants = {
+  hidden: {
+    opacity: 0,
+    x: 200,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { delay: 0.2, duration: 1.5 },
+  },
+  exit: {
+    opacity: 0,
+    x: -200,
+    transition: { delay: 0.2, duration: 1.5 },
+  },
+};
 
 const TextSection = ({
   name,
@@ -13,7 +38,15 @@ const TextSection = ({
   //overview section
   const overviewSection = (
     <Fragment>
-      <p>{overview.content}</p>
+      <motion.p
+        variants={parVariants}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+        key='1'
+      >
+        {overview.content}
+      </motion.p>
       <div>
         <span>Source:</span>
         <a href={overview.source}>
@@ -26,7 +59,15 @@ const TextSection = ({
   //strucute section
   const structureSection = (
     <Fragment>
-      <p>{structure.content}</p>
+      <motion.p
+        variants={parVariants}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+        key='2'
+      >
+        {structure.content}
+      </motion.p>
       <div>
         <span>Source:</span>
         <a href={structure.source}>
@@ -39,7 +80,15 @@ const TextSection = ({
   //geo section
   const geologySection = (
     <Fragment>
-      <p>{geology.content}</p>
+      <motion.p
+        variants={parVariants}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+        key='3'
+      >
+        {geology.content}
+      </motion.p>
       <div>
         <span>Source:</span>
         <a href={geology.source}>
@@ -51,22 +100,14 @@ const TextSection = ({
   );
 
   return (
-    <StyledTextSection>
+    <StyledTextSection
+      variants={textSectionVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+    >
       <h1>{name}</h1>
-      {/* {(() => {
-        switch (+currentSection) {
-          case 0:
-            console.log('overview');
-            return overviewSection;
-          case 1:
-            return structureSection;
-          case 2:
-            return geologySection;
 
-          default:
-            return overviewSection;
-        }
-      })()} */}
       {+currentSection === 0 && overviewSection}
       {+currentSection === 1 && structureSection}
       {+currentSection === 2 && geologySection}

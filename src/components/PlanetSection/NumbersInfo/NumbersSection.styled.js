@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const StyledNumberSection = styled.ul`
+export const StyledNumberSection = styled(motion.ul)`
   padding: 0 1.5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;

@@ -8,8 +8,30 @@ const Tabs = ({ sectionColor, setCurrentSection }) => {
     setId(event.target.id);
     setCurrentSection(event.target.id);
   };
+
+  const tabsVariants = {
+    hidden: {
+      opacity: 0,
+      x: '-100vw',
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { delay: 0.2, duration: 1.5 },
+    },
+    exit: {
+      opacity: 0,
+      x: '+100vw',
+      transition: { delay: 0.2, duration: 1.5 },
+    },
+  };
   return (
-    <StyledTabs>
+    <StyledTabs
+      variants={tabsVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
+    >
       <Button
         id='0'
         onClick={onClickHandler}
