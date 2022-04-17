@@ -12,7 +12,7 @@ const Tabs = ({ sectionColor, setCurrentSection }) => {
   const tabsVariants = {
     hidden: {
       opacity: 0,
-      x: '-100vw',
+      x: '100vw',
     },
     visible: {
       opacity: 1,
@@ -21,7 +21,7 @@ const Tabs = ({ sectionColor, setCurrentSection }) => {
     },
     exit: {
       opacity: 0,
-      x: '+100vw',
+      x: '100vw',
       transition: { delay: 0.2, duration: 1.5 },
     },
   };

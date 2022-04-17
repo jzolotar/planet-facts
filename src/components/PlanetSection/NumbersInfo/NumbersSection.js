@@ -4,16 +4,16 @@ const NumbersSection = ({ rotation, revolution, radius, temperature }) => {
   const numberSectionVariants = {
     hidden: {
       opacity: 0,
-      x: 200,
+      y: '100vh',
     },
     visible: {
       opacity: 1,
-      x: 0,
+      y: 0,
       transition: { delay: 0.2, duration: 1.5 },
     },
     exit: {
       opacity: 0,
-      x: 200,
+      y: '100vh',
       transition: { delay: 0.2, duration: 1.5 },
     },
   };

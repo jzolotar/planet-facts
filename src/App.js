@@ -25,7 +25,7 @@ function App() {
     <Provider>
       <Wrapper>
         <Navbar />
-        <AnimatePresence exitBeforeEnter={true} initial={false}>
+        <AnimatePresence exitBeforeEnter={true}>
           <Routes location={location} key={location.pathname}>
             <Route path='/' element={<Navigate replace to='/earth' />} />
             <Route path='/earth' element={<Earth />} />

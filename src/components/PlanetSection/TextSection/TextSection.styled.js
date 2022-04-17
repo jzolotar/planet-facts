@@ -35,7 +35,7 @@ export const StyledTextSection = styled(motion.article)`
     text-align: center;
     font-size: 0.9rem;
     line-height: 1.3rem;
-    min-height: 7.8rem;
+    min-height: 9rem;
     color: ${({ theme }) => theme.colors.whiteAlpha50};
     @media (min-width: 52rem) {
       text-align: left;
