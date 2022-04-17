@@ -1,10 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Navigate,
-  Route,
-  Routes,
-  useLocation,
-} from 'react-router-dom';
+import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Provider from './components/Provider/Provider';
 import Wrapper from './components/Wrapper/Wrapper';
 import Navbar from './components/Navbar/Navbar';

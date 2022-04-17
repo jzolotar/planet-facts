@@ -1,7 +1,7 @@
 import { StyledTextSection } from './TextSection.styled';
 
 import { FiExternalLink } from 'react-icons/fi';
-import { Fragment } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 
 const parVariants = {
@@ -38,68 +38,11 @@ const TextSection = ({
   geology,
   currentSection,
 }) => {
-  // //overview section
-  // const overviewSection = (
-  //   <Fragment>
-  //     <motion.p
-  //       variants={parVariants}
-  //       initial='hidden'
-  //       animate='visible'
-  //       exit='exit'
-  //     >
-  //       {overview.content}
-  //     </motion.p>
-  //     <div>
-  //       <span>Source:</span>
-  //       <a href={overview.source}>
-  //         Wikipedia
-  //         <FiExternalLink size={12} />
-  //       </a>
-  //     </div>
-  //   </Fragment>
-  // );
-  // //strucute section
-  // const structureSection = (
-  //   <Fragment>
-  //     <motion.p
-  //       key={currentSection}
-  //       variants={parVariants}
-  //       initial='hidden'
-  //       animate='visible'
-  //       exit='exit'
-  //     >
-  //       {structure.content}
-  //     </motion.p>
-  //     <div>
-  //       <span>Source:</span>
-  //       <a href={structure.source}>
-  //         Wikipedia
-  //         <FiExternalLink size={12} />
-  //       </a>
-  //     </div>
-  //   </Fragment>
-  // );
-  // //geo section
-  // const geologySection = (
-  //   <Fragment>
-  //     <motion.p
-  //       variants={parVariants}
-  //       initial='hidden'
-  //       animate='visible'
-  //       exit='exit'
-  //       key='3'
-  //     >
-  //       {geology.content}
-  //     </motion.p>
-  //     <div>
-  //       <span>Source:</span>
-  //       <a href={geology.source}>
-  //         Wikipedia
-  //         <FiExternalLink size={12} />
-  //       </a>
-  //     </div>
-  //   </Fragment>
-  // );
+  let content = {};
+
+  if (+currentSection === 0) content = overview;
+  if (+currentSection === 1) content = structure;
+  if (+currentSection === 2) content = geology;
 
   return (
     <StyledTextSection
@@ -111,9 +54,6 @@ const TextSection = ({
       <h1>{name}</h1>
 
       <AnimatePresence exitBeforeEnter>
-        {/* {+currentSection === 0 && overviewSection}
-        {+currentSection === 1 && structureSection}
-        {+currentSection === 2 && geologySection} */}
         <motion.p
           variants={parVariants}
           initial='hidden'
@@ -121,12 +61,12 @@ const TextSection = ({
           exit='exit'
           key={currentSection}
         >
-          {geology.content}
+          {content.content}
         </motion.p>
       </AnimatePresence>
       <div>
         <span>Source:</span>
-        <a href={geology.source}>
+        <a href={content.source}>
           Wikipedia
           <FiExternalLink size={12} />
         </a>

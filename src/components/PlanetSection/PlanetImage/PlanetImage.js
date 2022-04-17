@@ -1,6 +1,5 @@
 import { ImgStyled, Image } from './PlanetImage.styled';
 import { AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
 
 const containerVariants = {
   hidden: {
